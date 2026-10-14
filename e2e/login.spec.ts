@@ -5,7 +5,7 @@ test('usuário obrigatório', async ({ page }) => {
   await toast(page, 'Informe o seu nome de usuário!')
 });
 
-test('senha obrigatória', async ({ page }) => {
+test('senha obrigatória!', async ({ page }) => {
   await login(page,'qa', '')
   await toast(page, 'Informe a sua senha secreta!')
 })
