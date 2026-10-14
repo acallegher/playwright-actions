@@ -38,7 +38,7 @@ jobs:
         retention-days: 30
 
     - name: Criar bugs no Jira
-      if: !cancelled() && steps.tests.outcome == 'failure'
+      if: ${{ !cancelled() && steps.tests.outcome == 'failure' }}
       env:
         JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
         JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
