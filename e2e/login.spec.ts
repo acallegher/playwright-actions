@@ -21,6 +21,11 @@ test('senha incorreta', async ({ page }) => {
   await toast(page, 'Oops! Credenciais inválidas :(')
 })
 
+test('TASK 2', async ({ page }) => {
+  await login(page,'qa', 'teste')
+  await toast(page, 'Oops! Credenciais inválidas :(')
+})
+
 test('com sucesso', async ({ page }) => {
   await login(page,'qa', 'xperience')
   await modal(page, 'Suas credenciais são válidas :)')
